@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-if DEVELOPMENT:
+if os.environ.get("DEVELOPMENT"): 
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
